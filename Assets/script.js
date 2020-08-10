@@ -6,7 +6,8 @@ $(document).ready(function () {
 })
 
 // get the search value
-var searchText = $('input[name="city"]').val();
+var city = $("#city").val()
+var searchText = city.val();
 console.log(searchText);
 
 // make the request to the weather api
@@ -28,7 +29,7 @@ localStorage.setItem('cities', JSON.stringify(cities));
 //listCities();
 
 // clear the cities div for new results
-$('#shows').html('');
+$('#cities').html('');
 
 //add all of the search results to the page
 for (var i = 0; i < Response.length; i++) {
